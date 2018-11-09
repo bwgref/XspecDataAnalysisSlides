@@ -1,0 +1,35 @@
+# Load the power-law model
+@po_only.xcm
+
+# Set up the fits
+notice all
+ignore *:0.-3. 50.-**
+statistic test ad
+statistic cstat
+parallel goodness 8
+parallel leven 8
+
+cpd /xw
+
+# Re-fit, just to be sure
+fit 1000
+
+setplot back
+setplot com re y1 1e-6 0.01
+# To make the figure for the keynote slides:
+setplot rebin 5 100 1 sqrt
+pl ld
+
+# Set up the chains:
+
+chain walkers 20
+chain length 20000
+chain burn 2000
+
+chain run powerlaw_example.fits
+
+# Visually check to see that things have converged:
+plot chain 0 
+
+# NOTE THAT THIS IS NOT A FORMAL CONVERGENCE TEST. That'll be in another example.
+

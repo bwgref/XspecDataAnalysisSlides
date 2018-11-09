@@ -1,0 +1,15 @@
+All of these files are based off of the example analysis in "Part 1".
+
+This is sequence ID 60160641002, using a 30-arcsec extraction region.
+
+See the sky_image png file to see the regions that were used.
+
+srcA_grp1.pha was produced using the grppha FTOOL.
+
+po_only.xcm loads the power-law model and the data. You can load this using @po_only.xcm
+
+example_goodness.xcm shows how I made the plots in Part 1, including the goodness plot for the power-law model. Do NOT run this one via @example_goodness.xcm, instead copy and past the lines over to your XSPEC> instead.
+
+
+chain_example.xcm shows the example for setting up the MCMC in Part 1.
+
