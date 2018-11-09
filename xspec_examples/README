@@ -8,8 +8,13 @@ srcA_grp1.pha was produced using the grppha FTOOL.
 
 po_only.xcm loads the power-law model and the data. You can load this using @po_only.xcm
 
-example_goodness.xcm shows how I made the plots in Part 1, including the goodness plot for the power-law model. Do NOT run this one via @example_goodness.xcm, instead copy and past the lines over to your XSPEC> instead.
+Below are example scripts, but do NOT run these via the "@script" from the command line. Instead, copy and past the code over to your XSPEC> instead.
 
+example_goodness.xcm shows how I made the plots in Part 2, including the goodness plot for the power-law model.
+example_chain.xcm shows the example for setting up the MCMC in Part 2. D
 
-chain_example.xcm shows the example for setting up the MCMC in Part 1.
+example_simftest.xcm shows how I set up the simtest run in Part 2.
 
+Example_Check_simftest_results.ipynb is a Jupyter notebook showing how I checked the simftest shown in Part2.
+
+Example_BIC.ipynb is how I compute the Bayes Information Criteria (BIC) values and compare the two models in Part 2.

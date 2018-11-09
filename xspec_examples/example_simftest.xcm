@@ -1,0 +1,21 @@
+# Load the power-law model
+@po_and_gauss.xcm
+
+# Set up the fits
+notice all
+ignore *:0.-3. 50.-**
+statistic test ad
+statistic cstat
+parallel goodness 8
+parallel leven 8
+
+cpd /xw
+setplot rebin 5 100 1 sqrt
+
+# Re-fit, just to be sure
+fit 1000
+pl
+
+simftest 2 1000 simftest_po_gauss.txt
+
+
